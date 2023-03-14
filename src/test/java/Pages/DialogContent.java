@@ -42,6 +42,22 @@ public class DialogContent extends MyMethods {
     @FindBy(xpath = "//div[@id='cconsent-bar']//button[@class='consent-give']")
     private WebElement acceptCookies;
 
+    @FindBy(xpath = "(//input[@data-placeholder='Name'])[1]")
+    private WebElement countryNameSearch;
+
+    @FindBy(xpath = "(//input[@data-placeholder='Code'])[1]")
+    private WebElement countryCodeSearch;
+
+    @FindBy(xpath = "//span[text()='Search']")
+    private WebElement countrySearchBtn;
+
+    @FindBy(css = "ms-delete-button[class='ng-star-inserted']")
+    private WebElement deleteCountryButton;
+
+    @FindBy(xpath = "//span[contains(text(),'Delete')]")
+    private WebElement confirmDeleteCountry;
+
+
     public WebElement getLoginUsername() {
         return loginUsername;
     }
@@ -80,5 +96,25 @@ public class DialogContent extends MyMethods {
 
     public WebElement getAcceptCookies() {
         return acceptCookies;
+    }
+
+    public WebElement getCountryNameSearch() {
+        return countryNameSearch;
+    }
+
+    public WebElement getCountryCodeSearch() {
+        return countryCodeSearch;
+    }
+
+    public WebElement getCountrySearchBtn() {
+        return countrySearchBtn;
+    }
+
+    public WebElement getDeleteCountryButton() {
+        return deleteCountryButton;
+    }
+
+    public WebElement getConfirmDeleteCountry() {
+        return confirmDeleteCountry;
     }
 }
