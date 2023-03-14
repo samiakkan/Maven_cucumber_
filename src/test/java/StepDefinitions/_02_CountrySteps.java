@@ -21,8 +21,8 @@ public class _02_CountrySteps {
     @When("Create a new country")
     public void createANewCountry() {
         dc.clickMethod(dc.getAddButton());
-        dc.sendKeysMethod(dc.getFormNameInput(),"USA1964");
-        dc.sendKeysMethod(dc.getFormCodeInput(),"u17");
+        dc.sendKeysMethod(dc.getFormNameInput(),"USA19111164");
+        dc.sendKeysMethod(dc.getFormCodeInput(),"u111117");
         dc.clickMethod(dc.getSaveButton());
     }
 
@@ -33,6 +33,15 @@ public class _02_CountrySteps {
 
     @When("Delete country")
     public void deleteCountry() {
-
+        dc.sendKeysMethod(dc.getCountryNameSearch(),"USA19111164");
+        dc.sendKeysMethod(dc.getCountryCodeSearch(),"u111117");
+        dc.clickMethod(dc.getCountrySearchBtn());
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        dc.clickMethod(dc.getDeleteCountryButton());
+        dc.clickMethod(dc.getConfirmDeleteCountry());
     }
 }
