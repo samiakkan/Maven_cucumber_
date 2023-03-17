@@ -21,6 +21,21 @@ public class Navigation extends MyMethods {
     @FindBy(xpath = "(//span[text()='Countries'])[1]")
     private WebElement countriesBtn;
 
+    @FindBy(xpath = "//a[@href='/citizenships/list']")
+    private WebElement citizenshipButton;
+
+    @FindBy(xpath = "(//span[text()='Fees'])[1]")
+    private WebElement feesButton;
+
+    @FindBy(xpath = "(//span[text()='Entrance Exams'])[1]")
+    private WebElement entranceExamsButton;
+
+    @FindBy(xpath = "(//span[text()='Setup'])[2]")
+    private WebElement entranceExamsSetupButton;
+
+    @FindBy(xpath = "(//span[text()='Entrance Exams'])[2]")
+    private WebElement entranceExamsInnerButton;
+
     public WebElement getSetupBtn() {
         return setupBtn;
     }
@@ -31,5 +46,25 @@ public class Navigation extends MyMethods {
 
     public WebElement getCountriesBtn() {
         return countriesBtn;
+    }
+
+    public WebElement getCitizenshipButton() {
+        return citizenshipButton;
+    }
+
+    public WebElement getFeesButton() {
+        return feesButton;
+    }
+
+    public WebElement getEntranceExamsButton() {
+        return entranceExamsButton;
+    }
+
+    public WebElement getEntranceExamsSetupButton() {
+        return entranceExamsSetupButton;
+    }
+
+    public WebElement getEntranceExamsInnerButton() {
+        return entranceExamsInnerButton;
     }
 }
