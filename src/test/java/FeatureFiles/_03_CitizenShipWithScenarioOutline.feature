@@ -14,10 +14,10 @@ Feature: Citizenship Functionality
     Then Success message should be displayed
     Examples:
       | CitizenshipName | CitizenshipShortName |
-      | RGP1            | rg1                  |
-      | RGP2            | rg2                  |
-      | RGP3            | rg3                  |
-      | RGP4            | rg4                  |
+      | SAM11            | SA11                  |
+      | SAM22            | SA22                  |
+      | SAM33            | SA33                  |
+      | SAM44            | SA44                  |
 
   Scenario Outline: Delete Citizenship
     And Search for Citizenship with name as "<CitizenshipName>" nad short name as "<CitizenshipShortName>"
@@ -25,7 +25,8 @@ Feature: Citizenship Functionality
     Then Success message should be displayed
     Examples:
       | CitizenshipName | CitizenshipShortName |
-      | RGP1            | rg1                  |
-      | RGP2            | rg2                  |
-      | RGP3            | rg3                  |
-      | RGP4            | rg4                  |
+      | SAM11            | SA11                  |
+      | SAM22            | SA22                  |
+      | SAM33            | SA33                  |
+      | SAM44            | SA44                  |
+
