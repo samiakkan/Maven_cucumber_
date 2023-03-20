@@ -4,6 +4,7 @@ import Pages.DialogContent;
 import Pages.Navigation;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
@@ -18,7 +19,7 @@ public class _03_CitizenShipSteps {
         nv.clickMethod(nv.getCitizenshipButton());
     }
 
-    @And("Enter citizenship name as {string} and citizenship short name as {string}")
+    @When("Enter citizenship name as {string} and citizenship short name as {string}")
     public void enterCitizenshipNameAsAndCitizenshipShortNameAs(String citizenshipName, String citizenshipShortName) {
         dc.sendKeysMethod(dc.getFormNameInput(),citizenshipName);
         dc.sendKeysMethod(dc.getCitizenshipShortName(),citizenshipShortName);
