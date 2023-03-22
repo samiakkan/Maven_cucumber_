@@ -2,14 +2,14 @@ package Utilities;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.*;
 import org.testng.Assert;
 
 import java.time.Duration;
-public class MyMethods {
-    public WebDriverWait wait = new WebDriverWait(BasicDriver.getDriver(), Duration.ofSeconds(10));
 
+public class MyMethods {
+
+    public WebDriverWait wait = new WebDriverWait(BasicDriver.getDriver(), Duration.ofSeconds(2));
     public void sendKeysMethod(WebElement element, String keys){
         waitUntilVisible(element);
         scrollToElement(element);
@@ -39,6 +39,6 @@ public class MyMethods {
     public void verifyContainsText(WebElement element, String value){
         waitUntilVisible(element);
         Assert.assertTrue(element.getText().contains(value));
-
     }
+
 }
