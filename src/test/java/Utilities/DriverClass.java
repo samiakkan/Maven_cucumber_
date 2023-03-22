@@ -1,6 +1,5 @@
 package Utilities;
 
-import org.apache.poi.ss.formula.atp.Switch;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -8,13 +7,18 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
-public class ParameterDriverClass {
-
+public class DriverClass {
+    private WebDriver driver;
     private static ThreadLocal<WebDriver> threadDriver = new ThreadLocal<>();
     private static ThreadLocal<String> threadDriverName = new ThreadLocal<>();
 
     public static WebDriver getDriver() {
         if (threadDriver.get()==null) {
+
+            if(threadDriverName.get()==null){
+                threadDriverName.set("chrome");
+            }
+
             switch (threadDriverName.get()) {
                 case "firefox":
                     threadDriver.set(new FirefoxDriver());
@@ -32,5 +36,16 @@ public class ParameterDriverClass {
             }
         }
         return threadDriver.get();
+    }
+
+    public static void quitDriver(){
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        if (threadDriver.get()!=null) {
+            threadDriver.get().quit();
+        }
     }
 }

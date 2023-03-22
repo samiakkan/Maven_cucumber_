@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-public class BasicDriver {
+public class OldDriverClass {
     private static WebDriver driver;
     public static WebDriver getDriver() {
 
@@ -24,13 +24,13 @@ public class BasicDriver {
     }
 
     public static void quitDriver()  {
-       try {
-           Thread.sleep(3000);
-       }catch (InterruptedException e){
-           throw new RuntimeException(e);
-       }
-       driver.quit();
-       driver = null;
+        try {
+            Thread.sleep(3000);
+        }catch (InterruptedException e){
+            throw new RuntimeException(e);
+        }
+        driver.quit();
+        driver = null;
 
     }
 }

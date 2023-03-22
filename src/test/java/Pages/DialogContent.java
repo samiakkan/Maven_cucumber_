@@ -1,6 +1,6 @@
 package Pages;
 
-import Utilities.BasicDriver;
+import Utilities.DriverClass;
 import Utilities.MyMethods;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,7 +11,7 @@ import java.util.List;
 public class DialogContent extends MyMethods {
 
     public DialogContent() {
-        PageFactory.initElements(BasicDriver.getDriver(), this);
+        PageFactory.initElements(DriverClass.getDriver(), this);
     }
 
     @FindBy(css = "input[placeholder='Username']")
