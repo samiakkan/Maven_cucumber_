@@ -9,7 +9,7 @@ import java.time.Duration;
 
 public class MyMethods {
 
-    public WebDriverWait wait = new WebDriverWait(DriverClass.getDriver(), Duration.ofSeconds(2));
+    public WebDriverWait wait = new WebDriverWait(DriverClass.getDriver(), Duration.ofSeconds(10));
     public void sendKeysMethod(WebElement element, String keys){
         waitUntilVisible(element);
         scrollToElement(element);

@@ -46,6 +46,12 @@ public class DriverClass {
         }
         if (threadDriver.get()!=null) {
             threadDriver.get().quit();
+            WebDriver driver = null;
+            threadDriver.set(driver);
         }
+    }
+
+    public static void setThreadDriverName(String browserName){
+        threadDriverName.set(browserName);
     }
 }
