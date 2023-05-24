@@ -31,7 +31,7 @@ Feature: Country Functionality
 
   Scenario:
     And Click on add button
-    When Enter country name as "USA1" and code as "U1"
+    When Enter country name as "USA12" and code as "U12"
     And Click on save button
     Then Success message should be displayed
 

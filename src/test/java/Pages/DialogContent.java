@@ -104,6 +104,9 @@ public class DialogContent extends MyMethods {
     @FindBy(css = "iframe[class='tox-edit-area__iframe']")
     private WebElement descriptionAndNoteIFrame;
 
+    @FindBy(xpath = "//tbody[@role='rowgroup']//td[2]")
+    private List<WebElement> statesList;
+
     public WebElement getLoginUsername() {
         return loginUsername;
     }
@@ -222,5 +225,9 @@ public class DialogContent extends MyMethods {
 
     public WebElement getDescriptionAndNoteIFrame() {
         return descriptionAndNoteIFrame;
+    }
+
+    public List<WebElement> getStatesList() {
+        return statesList;
     }
 }

@@ -22,8 +22,8 @@ public class _02_CountrySteps {
     @When("Create a new country")
     public void createANewCountry() {
         dc.clickMethod(dc.getAddButton());
-        dc.sendKeysMethod(dc.getFormNameInput(),"USA1");
-        dc.sendKeysMethod(dc.getFormCodeInput(),"U1");
+        dc.sendKeysMethod(dc.getFormNameInput(),"USA123");
+        dc.sendKeysMethod(dc.getFormCodeInput(),"U123");
         dc.clickMethod(dc.getSaveButton());
     }
 
