@@ -32,6 +32,7 @@ public class DriverClass {
                 default:
                     ChromeOptions options = new ChromeOptions();
                     options.addArguments("--remote-allow-origins=*"); // To solve the error with Chrome v111
+                    options.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu", "--window-size=1400,2400");
                     threadDriver.set(new ChromeDriver(options));
             }
         }
